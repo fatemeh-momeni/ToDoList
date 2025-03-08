@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "bISmQMkmQYE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fatem\\Source\\Repos\\ToDoList\\ToDoList.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fatem\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
+    "C:\\Users\\fatem\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\fatem\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.2\\microsoft.aspnetcore.app.runtime.win-x64.9.0.2.nupkg.sha512",
+    "C:\\Users\\fatem\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.2\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.2.nupkg.sha512",
+    "C:\\Users\\fatem\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.2\\microsoft.netcore.app.runtime.win-x64.9.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
