@@ -5,40 +5,14 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Task": {
+    "/api/tasks": {
       "get": {
         "tags": [
           "Task"
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TaskItem"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TaskItem"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TaskItem"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -50,17 +24,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/TaskItem"
+                "$ref": "#/components/schemas/CreateTaskDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/TaskItem"
+                "$ref": "#/components/schemas/CreateTaskDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/TaskItem"
+                "$ref": "#/components/schemas/CreateTaskDto"
               }
             }
           }
@@ -72,7 +46,7 @@
         }
       }
     },
-    "/api/Task/{id}": {
+    "/api/tasks/{id}": {
       "get": {
         "tags": [
           "Task"
@@ -90,24 +64,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TaskItem"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TaskItem"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TaskItem"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -130,17 +87,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/TaskItem"
+                "$ref": "#/components/schemas/UpdateTaskDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/TaskItem"
+                "$ref": "#/components/schemas/UpdateTaskDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/TaskItem"
+                "$ref": "#/components/schemas/UpdateTaskDto"
               }
             }
           }
@@ -176,13 +133,30 @@
   },
   "components": {
     "schemas": {
-      "TaskItem": {
+      "CreateTaskDto": {
         "type": "object",
         "properties": {
-          "id": {
+          "title": {
             "type": "string",
-            "format": "uuid"
+            "nullable": true
           },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCompeleted": {
+            "type": "boolean"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateTaskDto": {
+        "type": "object",
+        "properties": {
           "title": {
             "type": "string",
             "nullable": true

@@ -32,23 +32,23 @@ namespace ToDoList.Infrastructure
         public async Task AddAsync(T entity)
         {
             await _dbSet.AddAsync(entity);
+            await _context.SaveChangesAsync(); 
         }
 
         public async Task UpdateAsync(T entity)
         {
             _dbSet.Update(entity);
+            await _context.SaveChangesAsync(); 
         }
 
         public async Task DeleteAsync(Guid id)
         {
             var entity = await GetByIdAsync(id);
             if (entity != null)
+            {
                 _dbSet.Remove(entity);
-        }
-
-        public async Task SaveChangesAsync()
-        {
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(); 
+            }
         }
     }
 }

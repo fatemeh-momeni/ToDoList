@@ -1,6 +1,5 @@
 ﻿using ToDoList.Application.DTOs;
 using ToDoList.Domain;
-using ToDoList.Infrastructure.Persistence;
 
 namespace ToDoList.Application.Services
 {
@@ -49,7 +48,7 @@ namespace ToDoList.Application.Services
                 Id = Guid.NewGuid(),
                 Title = taskDto.Title,
                 Description = taskDto.Description,
-                IsCompleted = false,
+                IsCompleted = true,
                 DueDate = taskDto.DueDate
             };
 

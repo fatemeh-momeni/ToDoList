@@ -2,34 +2,24 @@
   {
     "ContainingType": "ToDoList.API.Controllers.TaskController",
     "Method": "GetAllTasks",
-    "RelativePath": "api/Task",
+    "RelativePath": "api/tasks",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ToDoList.Domain.TaskItem, ToDoList.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ToDoList.API.Controllers.TaskController",
     "Method": "CreateTask",
-    "RelativePath": "api/Task",
+    "RelativePath": "api/tasks",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "task",
-        "Type": "ToDoList.Domain.TaskItem",
+        "Name": "taskDto",
+        "Type": "ToDoList.Application.DTOs.CreateTaskDto",
         "IsRequired": true
       }
     ],
@@ -38,7 +28,7 @@
   {
     "ContainingType": "ToDoList.API.Controllers.TaskController",
     "Method": "GetTaskById",
-    "RelativePath": "api/Task/{id}",
+    "RelativePath": "api/tasks/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -49,22 +39,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "ToDoList.Domain.TaskItem",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ToDoList.API.Controllers.TaskController",
     "Method": "UpdateTask",
-    "RelativePath": "api/Task/{id}",
+    "RelativePath": "api/tasks/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -75,8 +55,8 @@
         "IsRequired": true
       },
       {
-        "Name": "task",
-        "Type": "ToDoList.Domain.TaskItem",
+        "Name": "taskDto",
+        "Type": "ToDoList.Application.DTOs.UpdateTaskDto",
         "IsRequired": true
       }
     ],
@@ -85,7 +65,7 @@
   {
     "ContainingType": "ToDoList.API.Controllers.TaskController",
     "Method": "DeleteTask",
-    "RelativePath": "api/Task/{id}",
+    "RelativePath": "api/tasks/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
